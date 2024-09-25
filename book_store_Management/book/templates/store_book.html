@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1 style="text-align: center; width: 60%; margin: auto; padding: 10px; margin-top: 20px; background-color: gold;">Welcome to Book Store Management</h1>
+<div style="width: 30%; margin: auto; margin-top: 40px">
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+   
+</div>
+{% endblock %}
